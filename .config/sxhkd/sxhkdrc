@@ -135,7 +135,10 @@ super + shift + e
     thunar
 
 # scrot
-super + shift + s 
+super + alt + s 
+    scrot
+
+super + shift + s
     scrot -s
 
 # -------- Hardware Configs -------
