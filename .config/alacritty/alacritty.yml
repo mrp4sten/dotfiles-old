@@ -1,0 +1,131 @@
+# Mauricio Pasten (mrp4sten)
+
+window:
+  dimensions:
+    columns: 0
+    lines: 0
+  position:
+    x: 0
+    y: 0
+  padding:
+    x: 10
+    y: 10
+  dynamic_padding: false
+
+  # Window decorations
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  decorations: none
+
+  # Background opacity
+  opacity: 0.6
+
+  # Startup Mode (changes require restart)
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  startup_mode: Maximized
+
+  # GTK theme variant (Linux/BSD only)
+  gtk_theme_variant: None
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  history: 100000
+
+  # Scrolling distance multiplier.
+  multiplier: 3
+
+# Font configuration
+font:
+  # Normal font face
+  normal:
+    family: Agave NF
+    style: Regular
+
+  # Bold font face
+  bold:
+    family: Agave NF
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: Agave NF
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: Agave NF
+    #style: Bold Italic
+
+  # Point size
+  size: 13.0
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  offset:
+    x: 0
+    y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
+  glyph_offset:
+    x: 0
+    y: 0
+
+# Colors (Dracula)
+colors:
+  # Default colors
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#caa9fa'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
+
+  # Bright colors
+  bright:
+    black:   '#575b70'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'
+
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Beam
+
+    # Cursor blinking state
+    #
+    # Values for `blinking`:
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: Always
+
+# Shell
+shell:
+  program: /bin/zsh
+  args:
+    - --login

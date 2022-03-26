@@ -1,0 +1,10 @@
+# Ignore everything
+/*
+!.gitignore
+
+# Except for the files and folders we want to track
+!alacritty
+!bspwm
+!sxhkd
+!gtk-2.0
+!gtk-3.0
