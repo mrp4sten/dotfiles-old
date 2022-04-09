@@ -168,3 +168,4 @@ function fzf-lovely(){
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
