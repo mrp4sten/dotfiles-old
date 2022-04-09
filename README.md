@@ -194,6 +194,16 @@ also with <kbd>alt, shift, and ctrl</kbd>
 | <kbd>ctrl + shift + n</kbd>             | Restore minimized                                         |
 | <kbd>alt + tab</kbd>                    | Window switcher                                           |
 
+you can configure keybinds in the path
+```shell
+dotfiles/config/awesome/configuration keys.lua 
+```
+
+you can configure default applications in the path
+```shell
+dotfiles/config/awesome/rc.lua 
+```
+
 <br>
 </details>
 
