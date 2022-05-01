@@ -49,7 +49,8 @@ cp dotfiles/config/kitty ~/.config/
 Installing zsh and plugins
 ```shell
 sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions lsd bat exa mdcat
-
+```
+  
 Installing oh-my-zsh
 ```shell
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
