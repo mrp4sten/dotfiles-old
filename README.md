@@ -1,9 +1,4 @@
 # Welcome to my personal Arch Linux workspace
-
-![Preview1](./screenshots/preview-1.png)
-![Preview2](./screenshots/preview-2.png)
-![Preview3](./screenshots/preview-3.png)
-
 # Installation/Configuration
 <details>
 <summary><strong>STEPS</strong></summary>
@@ -74,12 +69,34 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
-Copy my personal zsh configuration
+Install Neovim
 ```shell
-cp dotfiles/.zshrc .
-cp dotfiles/.p10k.zsh .
-cp dotfiles/.nanorc
-cp dotfiles/.bashrc
+paru -S neovim
+```
+
+Install some dependencies
+```shell
+paru -S yarn npm nodejs
+```
+
+Install vim-plug
+```shell
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+Configuration Nvim
+```shell
+cp -r dotfiles/config/nvim ~/.config/
+```
+
+Copy my personal zsh, bash, nano and vimrc configuration
+```shell
+cp dotfiles/.zshrc ~/
+cp dotfiles/.p10k.zsh ~/
+cp dotfiles/.nanorc ~/
+cp dotfiles/.bashrc ~/
+cp dotfiles/.vimrc ~/
 ```
 
 * <p> Install my favorite minimal browser </p>
@@ -92,133 +109,11 @@ paru -S min # Note: paru command dont need "sudo"
 paru -S google-chrome # Note: paru command dont need "sudo"
 ```
 
-* <p> Some packages </p>
+* <p> Install ulauncher </p>
 ```shell
-paru -Sy awesome-git picom-git alacritty rofi todo-bin acpi acpid \
-wireless_tools jq inotify-tools polkit-gnome xdotool xclip maim \
-brightnessctl alsa-utils alsa-tools lm_sensors pulseaudio \
-mpd mpc mpdris2 ncmpcpp playerctl feh spotify --needed
+paru -S ulauncher # Note: paru command dont need "sudo"
 ```
 
-* <p> Services </p>
-For automatically launching mpd on login
-```shell
-systemctl --user enable mpd.service
-systemctl --user start mpd.service
-```
-
-For charger plug/unplug events (if you have a battery)
-```shell
-sudo systemctl enable acpid.service
-sudo systemctl start acpid.service
-```
-
-* <p> Fonts </p>
-```shell
-cd /usr/share/fonts
-sudo wget http://fontlot.com/downfile/5baeb08d06494fc84dbe36210f6f0ad5.105610
-```
-
-Rename downloaded archive
-```shell
-sudo mv 5baeb08d06494fc84dbe36210f6f0ad5.105610 fonts.zip 
-```
-
-Uncompress fonts.zip
-```shell
-sudo unzip fonts.zip 
-```
-
-Delete fonts.zip
-```shell
-sudo rm fonts.zip
-```
-
-Moving fonts into workspace correctly
-```shell
-find . | grep "\.ttf$" | while read line; do sudo cp $line .; done 
-```
-
-Removing unnesesary directory
-```shell
-sudo rm -rf iosevka-2.2.1/ iosevka-slab-2.2.1/
-```
-
-[Download de following archive](0https://www.dropbox.com/s/hrkub2yo9iapljz/icomoon.zip?dl=0)
-
-Assuming that you're in /usr/share/fonts and your user is not root
-```shell
-sudo mv ~/Downloads/icomoon.zip .
-sudo unzip icomoon.zip
-sudo mv icomoon/*.ttf .
-sudo rm -rf icomoon
-```
-
-* <p> Last details </p>
-Create bin direcotry into .local like...
-```shell
-mkdir ~/.local/bin 
-```
-
-Copy the bin directory into .local/bin/
-```shell
-cp dotfiles/bin/* .local/bin 
-```
-
-Copy config directory into .config
-```shell
-cp dotfiles/config/* .config 
-```
-
-Configure your wallpaper in like this lines in the end of ~/.config/awesome/rc.lua 
-```lua
-local_wallpaper_cmd="feh --bg-fill path/your/wallpaper/image.jpg"
-os.execute(local_wallpaper_cmd)
-```
-</details>
-
-<details>
-<summary><strong>KEYBINDS AWESOME WM</strong></summary>
-
-I use <kbd>super</kbd> AKA Windows key as my main modifier.
-also with <kbd>alt, shift, and ctrl</kbd>
-
-**Keyboard**
-
-| Keybind                                 | Action                                                    |
-|-----------------------------------------|-----------------------------------------------------------|
-| <kbd>super + enter</kbd>                | Spawn terminal                                            |
-| <kbd>super + b</kbd>                    | Spawn web browser                                         |
-| <kbd>super + x</kbd>                    | Spawn color picker                                        |
-| <kbd>super + f</kbd>                    | Spawn file manager                                        |
-| <kbd>super + u</kbd>                    | Launch applications launcher                              |
-| <kbd>super + shift + d</kbd>            | Toggle dashboard                                          |
-| <kbd>super + q</kbd>                    | Close client                                              |
-| <kbd>super + ctrl + l</kbd>             | Toggle lock screen                                        |
-| <kbd>super + [1-0]</kbd>                | View tag AKA change workspace (for you i3/bsp folks)      |
-| <kbd>super + shift + [1-0]</kbd>        | Move focused client to tag                                |
-| <kbd>super + space</kbd>                | Select next layout                                        |
-| <kbd>super + s</kbd>                    | Set tiling layout                                         |
-| <kbd>super + shift + s</kbd>            | Set floating layout                                       |
-| <kbd>super + c</kbd>                    | Center floating client                                    |
-| <kbd>super + [arrow keys]</kbd>         | Change focus by direction                                 |
-| <kbd>super + shift + f</kbd>            | Toggle fullscreen                                         |
-| <kbd>super + m</kbd>                    | Toggle maximize                                           |
-| <kbd>super + n</kbd>                    | Minimize                                                  |
-| <kbd>ctrl + shift + n</kbd>             | Restore minimized                                         |
-| <kbd>alt + tab</kbd>                    | Window switcher                                           |
-
-you can configure keybinds in the path
-```shell
-dotfiles/config/awesome/configuration keys.lua 
-```
-
-you can configure default applications in the path
-```shell
-dotfiles/config/awesome/rc.lua 
-```
-
-<br>
 </details>
 
 <details>
