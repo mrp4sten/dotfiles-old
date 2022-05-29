@@ -1,4 +1,7 @@
 # Welcome to my personal Arch Linux workspace
+
+![Preview1](./screenshots/Preview.png)
+
 # Installation/Configuration
 <details>
 <summary><strong>STEPS</strong></summary>
@@ -112,6 +115,11 @@ paru -S google-chrome # Note: paru command dont need "sudo"
 * <p> Install ulauncher </p>
 ```shell
 paru -S ulauncher # Note: paru command dont need "sudo"
+```
+
+* <p> Install vscode </p>
+```shell
+paru -S visual-studio-code-bin # Note: paru command dont need "sudo"
 ```
 
 </details>
