@@ -130,7 +130,9 @@ alias cat='bat --paging=never'
 alias less='bat'
 alias tree='exa -T'
 alias grep='grep --color=auto'
-alias icat="kitty +kitten icat"
+alias icat='kitty +kitten icat'
+alias update='sudo pacman -Syyuu'
+alias bye='rm ~/.zsh_history'
 
 # Set 'man' colors
 function man() {
@@ -169,8 +171,3 @@ function fzf-lovely(){
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

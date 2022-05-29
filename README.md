@@ -18,7 +18,7 @@ Install paru for AUR helper
 
 ```shell
 sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
+git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd
 ```
 
 * <p> Terminal </p>
@@ -28,12 +28,18 @@ Install Kitty terminal
 sudo pacman -S kitty
 ```
 
-Download my favorite Nerd Font
+Download my favorites Nerd Font
 ```shell
 cd /usr/share/fonts
 sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
 sudo unzip Hack.zip
 sudo rm Hack.zip
+
+sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip
+sudo unzip CascadiaCode.zip
+sudo rm CascadiaCode.zip
+
+cd
 ```
 
 Clone my repository
@@ -43,7 +49,7 @@ git clone https://github.com/mrp4sten/dotfiles.git
 
 Configuration Kitty
 ```shell
-cp dotfiles/config/kitty ~/.config/
+cp -r dotfiles/config/kitty ~/.config/
 ```
 
 Installing zsh and plugins
@@ -72,11 +78,18 @@ Copy my personal zsh configuration
 ```shell
 cp dotfiles/.zshrc .
 cp dotfiles/.p10k.zsh .
+cp dotfiles/.nanorc
+cp dotfiles/.bashrc
 ```
 
 * <p> Install my favorite minimal browser </p>
 ```shell
 paru -S min # Note: paru command dont need "sudo"
+```
+
+* <p> Install chrome browser </p>
+```shell
+paru -S google-chrome # Note: paru command dont need "sudo"
 ```
 
 * <p> Some packages </p>
