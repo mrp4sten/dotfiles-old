@@ -1,14 +1,13 @@
 call plug#begin('~/.vim/plugged')
 
   " Themes
-  " Plug 'ghifarit53/tokyonight-vim'
+  Plug 'ghifarit53/tokyonight-vim'
   " Plug 'dracula/vim'
   " Plug 'joshdick/onedark.vim'
   " Plug 'morhetz/gruvbox'
   " Plug 'tomasiser/vim-code-dark'
   " Plug 'arcticicestudio/nord-vim'
-  Plug 'lifepillar/vim-solarized8'
-
+  " Plug 'lifepillar/vim-solarized8'
 
   " IDE
   Plug 'preservim/nerdtree'
@@ -21,7 +20,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   Plug 'tpope/vim-commentary'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   " Syntax
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
