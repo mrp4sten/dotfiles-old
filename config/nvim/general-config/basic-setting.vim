@@ -11,6 +11,5 @@ set sw=2
 set relativenumber
 set autoindent
 set cursorline
-set termguicolors
 set linebreak
 set nowrap

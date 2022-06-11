@@ -1,20 +1,11 @@
-" Nord Theme
-" colorscheme nord
-
-" Dracula Theme
-" colorscheme dracula
-" let g:airline_theme='dracula'
-
-" tokyonight
+" Color theme
 set termguicolors
-let g:tokyonight_style = 'storm' " available: night, storm
+
 let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
+let g:tokyonight_menu_selection_background = 'green'
+let g:tokyonight_cursor = 'red'
 let g:airline_theme = "tokyonight"
+
 colorscheme tokyonight
 
-" codedark
-" colorscheme codedark
-" let g:airline_theme = 'codedark'
-
-" set background=dark
-" colorscheme solarized8

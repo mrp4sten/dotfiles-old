@@ -1,7 +1,7 @@
 " neovide
 
-let s:guifontsize=10
-set guifont=Hack\ Nerd\ Font:h10
+let s:guifontsize=12
+set guifont=JetBrainsMono\ NF:h12
 
 let g:neovide_refresh_rate=140
 let g:neovide_transparency=0.8
