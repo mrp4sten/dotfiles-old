@@ -36,7 +36,10 @@ sudo rm Hack.zip
 sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip
 sudo unzip CascadiaCode.zip
 sudo rm CascadiaCode.zip
-
+  
+sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
+sudo unzip JetBrainsMono.zip
+sudo rm JetBrainsMono.zip
 cd
 ```
 
