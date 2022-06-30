@@ -12,7 +12,7 @@ elif [[ "$1" == "--telegram" ]]; then
 	${EWW} close-all && rm -rf "$FILE" && telegram-desktop &
 
 elif [[ "$1" == "--github" ]]; then
-	${EWW} close-all && rm -rf "$FILE" &&  $cmd "https://github.com" &
+	${EWW} close-all && rm -rf "$FILE" &&  $cmd "https://github.com/mrp4sten" &
 
 elif [[ "$1" == "--reddit" ]]; then
 	${EWW} close-all && rm -rf "$FILE" &&  $cmd "https://reddit.com" &

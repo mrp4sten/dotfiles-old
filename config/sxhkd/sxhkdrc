@@ -41,7 +41,7 @@ ctrl + alt + l
 
 # Launch Apps
 super + shift + {f,w,e}
-	{thunar,google-chrome-stable,code}
+	{thunar,firefox,code}
 
 ##---------- System Keys ----------##
 
