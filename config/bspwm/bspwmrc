@@ -83,7 +83,7 @@ xfce4-power-manager &
 bspfloat &
 
 # Start X wallpaper.
-feh --no-fehbg --bg-fill $HOME/.config/images/wallpapers/anime-01.jpg
+feh --no-fehbg --bg-fill $HOME/.config/images/wallpapers/anime-02.jpg
 
 
 # Fix cursor.
