@@ -171,3 +171,8 @@ function fzf-lovely(){
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Typewriten
+fpath+=$HOME/.zsh/typewritten
+autoload -U promptinit; promptinit
+prompt typewritten

@@ -43,6 +43,11 @@ sudo rm JetBrainsMono.zip
 cd
 ```
 
+Install FiraCode font run the script **install_fira_code_font.sh**
+```shell
+bash ./scripts/install_fira_code_font.sh
+```
+
 Clone my repository
 ```shell
 git clone https://github.com/mrp4sten/dotfiles.git
@@ -74,6 +79,12 @@ Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
+Install Typewritten theme for zsh
+```shell
+mkdir -p "$HOME/.zsh"
+git clone https://github.com/reobin/typewritten.git "$HOME/.zsh/typewritten"
+```
+
 
 Install Neovim
 ```shell
